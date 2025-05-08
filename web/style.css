@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Rye&family=Fondamento&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  background: #3b2f2300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Caveat', cursive;
+}
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.paper {
+  background: url('./assets/paper.webp');
+  background-size: cover;
+  padding: 40px;
+  width: 600px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+  border: 2px solid #4b3826;
+  text-align: left;
+  color: #2b1a0d;
+  transition: all 0.3s ease;
+}
+.title {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  cursor: pointer;
+  gap: 15px;
+}
+.checkbox {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #2b1a0d;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
+  color: green;
+  display: none;
+  animation: drawCheck 0.3s ease forwards;
+}
+.option-content {
+  flex: 1;
+}
+.option img {
+  max-width: 100px;
+  max-height: 100px;
+  border: 1px solid #2b1a0d;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+@keyframes drawCheck {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.option-title {
+  font-size: 1.8rem;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+.option-desc {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+.actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.action {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #2b1a0d;
+}
+.size-small .title {
+  font-size: 2rem;
+}
+.size-small .subtitle {
+  font-size: 1.2rem;
+}
+.size-small .option-title {
+  font-size: 1.4rem;
+}
+.size-small .option-desc {
+  font-size: 1rem;
+}
+.size-small .checkbox {
+  width: 30px;
+  height: 30px;
+}
+.size-small .option img {
+  max-width: 70px;
+  max-height: 70px;
+}
+.size-small .paper {
+  padding: 25px;
+  width: 400px;
+}
+.size-large .title {
+  font-size: 4rem;
+}
+.size-large .subtitle {
+  font-size: 2rem;
+}
+.size-large .option-title {
+  font-size: 2.2rem;
+}
+.size-large .option-desc {
+  font-size: 1.5rem;
+}
+.size-large .checkbox {
+  width: 50px;
+  height: 50px;
+}
+.size-large .option img {
+  max-width: 130px;
+  max-height: 130px;
+}
+.size-large .paper {
+  padding: 50px;
+  width: 800px;
+}
+.font-Caveat {
+  font-family: 'Caveat', cursive;
+}
+.font-Rye {
+  font-family: 'Rye', cursive;
+}
+.font-Fondamento {
+  font-family: 'Fondamento', cursive;
+}
+.position-left #container {
+  justify-content: flex-start;
+  padding-left: 5%;
+}
+.position-right #container {
+  justify-content: flex-end;
+  padding-right: 5%;
+}
+.position-center #container {
+  justify-content: center;
+}
+.error-message {
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 1px solid #800000;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+.input-text, .input-number, .input-select {
+  width: 100%;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid #4b3826;
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: #2b1a0d;
+  margin-top: 5px;
+}
+.input-text:focus, .input-number:focus, .input-select:focus {
+  outline: none;
+  border-color: #2b1a0d;
+}
+.range-container {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.input-range {
+  flex: 1;
+  height: 2px;
+  background: #4b3826;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity .2s;
+  -webkit-appearance: none;
+}
+.input-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #2b1a0d;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.range-value {
+  min-width: 40px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.radio-label input[type="radio"] {
+  display: none;
+}
+.radio-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #4b3826;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+.radio-label input[type="radio"]:checked + .radio-custom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background: #2b1a0d;
+  border-radius: 50%;
+}
+.size-small .input-text,
+.size-small .input-number,
+.size-small .input-select {
+  font-size: 1rem;
+  padding: 6px 10px;
+}
+.size-large .input-text,
+.size-large .input-number,
+.size-large .input-select {
+  font-size: 1.4rem;
+  padding: 10px 14px;
+}
