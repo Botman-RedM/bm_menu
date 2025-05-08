@@ -6,6 +6,10 @@ A highly customizable, old-west themed menu system for RedM with support for mul
 ![RedM](https://img.shields.io/badge/RedM-Compatible-red)
 ![License](https://img.shields.io/badge/license-Apache%202.0-green)
 
+<div align="center">
+  <img src="examples/menu-example-dialog.png" width="800" alt="Dialog Menu Example" />
+</div>
+
 ## Features at a Glance
 
 🎨 **Western Themed Design**
@@ -21,13 +25,55 @@ A highly customizable, old-west themed menu system for RedM with support for mul
 - Dropdown selects
 - Radio button groups
 
-⚙️ **Developer Features**
-- Simple, promise-based API
-- Comprehensive validation
-- Multiple/single selection modes
-- Flexible positioning
-- Size presets
-- Full documentation
+<div align="center">
+  <img src="examples/menu-example-character.png" width="1000" alt="Character Creation Example" />
+</div>
+
+## Menu Types & Examples
+
+### Dialog Menus
+Perfect for NPC conversations and quick choices:
+```lua
+local dialogMenu = {
+    {
+        id = 1,
+        title = "That's mighty fine",
+        description = "Express approval"
+    },
+    {
+        id = 2,
+        title = "I reckon not",
+        description = "Decline politely"
+    }
+}
+```
+
+### Character Creation
+Complex forms with various input types:
+
+<div align="center">
+  <img src="examples/menu-example-shop.png" width="900" alt="Shop Interface Example" />
+</div>
+
+```lua
+local characterMenu = {
+    {
+        id = 1,
+        title = "Name",
+        inputType = "text",
+        placeholder = "John Smith"
+    },
+    {
+        id = 2,
+        title = "Background",
+        inputType = "select",
+        options = {
+            {label = "Outlaw", value = "outlaw"},
+            {label = "Lawman", value = "lawman"}
+        }
+    }
+}
+```
 
 ## Quick Start
 
